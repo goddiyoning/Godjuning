@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>갓쥬닝 질문</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    button {
+      margin: 15px;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #response {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>갓쥬닝이신가영?</h2>
+  <button onclick="handleAnswer('yes')">YES</button>
+  <button onclick="handleAnswer('no')">NO</button>
+
+  <div id="response"></div>
+
+  <script>
+    function handleAnswer(answer) {
+      let response = "";
+      if (answer === "yes") {
+        response = "갓쥬닝은 갓디요니를 평생 사랑해야 합니당";
+      } else if (answer === "no") {
+        response = "뻥을 쳤으니까 이번 휴가 때 꼬기는 못 먹게 됩니다";
+      }
+      document.getElementById("response").innerText = response + "\n다랑해S2";
+    }
+  </script>
+
+</body>
+</html>
